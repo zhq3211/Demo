@@ -41,3 +41,18 @@ Wiki：	https://en.wikipedia.org/wiki/GitHub
 	git pull
 
 
+=== 创建个人主页 ===
+注： GitHub 为用户提供了一个二级域名："https:<用户名>.github.io/仓库名D" 作为个人主页，但是，根目录必须是含 index.html
+1. GitHub 中新建仓库
+2. 克隆到本地
+3. 仓库中新建网页 index.html
+4. 推送到远程仓库
+5. 发布设置：远程仓库D -> setting -> GitHub Pages -> Source: master brach -> save
+OK!!!
+
+PS: GitHub 中提供了一些主页模板，可以直接调用
+1. 模板设置： 远程仓库D -> setting -> Overwrite site -> Launch automatic page generator
+2. 编写网页的内容
+3. 编写完网页 -> Continue to layouts, 选择中意的模板，提交
+OK！
+
