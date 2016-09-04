@@ -40,6 +40,11 @@ Wiki：	https://en.wikipedia.org/wiki/GitHub
 7. 多用户协作时，需先下载
 	git pull
 
+三、分支的推送
+1. 创建分支后，或者分支上文件变化，都是用以下推送
+	 git push --set-upstream origin branch1
+
+
 
 === 创建个人主页 ===
 注： GitHub 为用户提供了一个二级域名："https:<用户名>.github.io/仓库名D" 作为个人主页，但是，根目录必须是含 index.html

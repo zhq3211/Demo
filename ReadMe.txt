@@ -1,5 +1,9 @@
 说明：
-Demo/ 文件主要用于初学的 item, 对应 GitHub.com 中的 Demo 仓库 ！
+Y430
+Demo/ 文件主要用于初学的 item,
+对应 GitHub.com 中的 Demo 仓库 ！
+
+
 
 1. GitHub.com 中创建远程仓库 [Demo]，对应的协议地址如下：
 	SSH 协议地址：		git@github.com:zhq3211/Demo.git
