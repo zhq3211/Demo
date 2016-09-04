@@ -13,7 +13,7 @@ Demo/ 文件主要用于初学的 item, 对应 GitHub.com 中的 Demo 仓库 ！
 	git commit -m "first commit"
 	git push origin master
 
-4. GitHub端修改...后，本地同步
+4. GitHub端修改后，本地同步
 	git pull
 
 PS: 本地克隆到 GitHub（GitHub.com 需新建远程仓库[name]）
