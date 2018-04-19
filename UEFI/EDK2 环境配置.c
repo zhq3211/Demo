@@ -1,28 +1,37 @@
 ﻿=== Platform & Tool ===
-EDK2: http://sourceforge.net/projects/edk2/
+EDK2: https://github.com/tianocore/edk2
+Win32: https://github.com/tianocore/edk2-BaseTools-win32
+NASM: https://www.nasm.us/pub/nasm/releasebuilds/2.13.03/win32/
 VS：Microsoft Visual Studio 2013
 OS: win7-64 / win8.1
 
 
 
 === 环境配置 [cmd] ===
-一、下载 EDK2 Source 以及 win32
-	因为，下载 DEK2 Source 后，发现 BaseTools\Bin\Win32只是个快捷键，需要单独下载 win32。
+一、下载 EDK2 Source、win32 以及 NASM
+    a. 将“edk2-BaseTools-win32” 拷贝到 “edk2\BaseTools\Bin\” 目录，并更名为 “Win32”
+    b. 将 “nasm-2.13.03\nasm.exe” 拷贝到 “edk2\BaseTools\Bin\Win32” 目录
 
 二、安装 VS2013
 	EDK2 需要用到 VS 的一些编译工具。
 
 三、配置 EDK2 环境(cmd)
-	a. cmd 命令行中执行： Edk2Setup.bat --NT32
-	或，“VS2013 开发人员命令提示”中执行：Edk2Setup.bat
+	a. cmd 命令行中执行： edksetup.bat --NT32
+	或，“VS2013 开发人员命令提示”中执行：edksetup.bat
 	b. 修改生成的 "BaseTools\Conf" 目录下的文件
 		target.txt
 		tools_def.txt
 		build_rule.txt
+    => 修改配置文件 target.txt
+    #TOOL_CHAIN_TAG   = MYTOOLS
+    TOOL_CHAIN_TAG	  = VS2013x86
 
 四、编译
 	build
 	build -p Nt32Pkg\Nt32Pkg.dsc -a IA32
+
+    注：
+    发生 error 时，根据 Error 信息处理！
 
 五、调试，进入仿真模式
 	build run
@@ -30,7 +39,7 @@ OS: win7-64 / win8.1
 
 六、shell 环境
 	>fs0:	[对应“Build\NT32IA32\DEBUG_VS2013x86\IA32” 目录]
-	>exit	[进入 Setup]
+	>exit 	[进入 Setup]
 	>reset	[退出shell/仿真模式]
 	
 
@@ -86,8 +95,5 @@ OS: win7-64 / win8.1
 	将 *.efi 拷贝到 Shell U盘，直接运行！
 	> fsX:
 	> *.efi
-
-
-
 
 
