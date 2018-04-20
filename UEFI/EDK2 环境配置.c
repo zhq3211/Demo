@@ -1,16 +1,22 @@
-﻿=== Platform & Tool ===
+﻿v0.1 2015 
+v0.2 2018.04 
+
+
+=== Platform & Tool ===
 EDK2: https://github.com/tianocore/edk2
 Win32: https://github.com/tianocore/edk2-BaseTools-win32
 NASM: https://www.nasm.us/pub/nasm/releasebuilds/2.13.03/win32/
+iasl: https://acpica.org/downloads/binary-tools
 VS：Microsoft Visual Studio 2013
 OS: win7-64 / win8.1
 
 
 
 === 环境配置 [cmd] ===
-一、下载 EDK2 Source、win32 以及 NASM
+一、下载 EDK2 Source、win32、NASM、iasl
     a. 将“edk2-BaseTools-win32” 拷贝到 “edk2\BaseTools\Bin\” 目录，并更名为 “Win32”
     b. 将 “nasm-2.13.03\nasm.exe” 拷贝到 “edk2\BaseTools\Bin\Win32” 目录
+	c. 将 "iasl-win-20180313\iasl.exe" 拷贝到 “C:\ASL\iasl.exe”
 
 二、安装 VS2013
 	EDK2 需要用到 VS 的一些编译工具。
@@ -22,9 +28,15 @@ OS: win7-64 / win8.1
 		target.txt
 		tools_def.txt
 		build_rule.txt
+		
     => 修改配置文件 target.txt
     #TOOL_CHAIN_TAG   = MYTOOLS
     TOOL_CHAIN_TAG	  = VS2013x86
+	
+	=> 修改配置文件 tools_def.txt
+	DEFINE WINSDK8_BIN       = C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin\x64\RC.Exe
+    DEFINE WINSDK8x86_BIN    = C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin
+  
 
 四、编译
 	build
